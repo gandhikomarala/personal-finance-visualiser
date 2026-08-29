@@ -42,4 +42,4 @@ cd frontend && npm test
 ```
 
 ## License
-Proprietary License - FinPulse Wealth Technologies Inc.
+Proprietary License - Gandhi Komarala. All Rights Reserved.
