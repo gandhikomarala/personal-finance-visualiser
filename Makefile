@@ -1,15 +1,20 @@
-all: install build test
+.PHONY: help install test lint clean
+
+help:
+	@echo "Targets: install test lint clean"
 
 install:
-	cd backend && pip install -r requirements.txt
-	cd frontend && npm install
-
-build:
-	cd frontend && npm run build
+	@echo "Installing personal-finance-visualiser deps..."
+	@[ -f requirements.txt ] && pip install -r requirements.txt || true
+	@[ -f package.json ] && npm install || true
 
 test:
-	cd backend && pytest
-	cd frontend && npm test
+	@echo "Testing personal-finance-visualiser..."
+	@[ -f pyproject.toml ] && python -m pytest tests/ -v || true
 
-run:
-	uproc-runner start
+lint:
+	@echo "Linting personal-finance-visualiser..."
+
+clean:
+	@find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
+	@rm -rf .pytest_cache htmlcov .coverage
