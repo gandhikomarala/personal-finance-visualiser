@@ -1,0 +1,15 @@
+**/node_modules/
+**/dist/
+**/build/
+**/.next/
+**/.cache/
+**/__pycache__/
+*.pyc
+*.pyo
+**/venv/
+**/.venv/
+**/env/
+**/.env
+.DS_Store
+**/coverage/
+**/.pytest_cache/
