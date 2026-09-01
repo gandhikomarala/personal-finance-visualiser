@@ -1,14 +1,8 @@
 {
-  "name": "personal-finance-visualiser",
-  "version": "4.2.0",
-  "private": true,
+  "name": "finance_repo",
+  "version": "2.4.0",
   "scripts": {
-    "vercel-build": "cd frontend && npm install && npm run build",
-    "build": "cd frontend && npm install && npm run build",
-    "dev": "cd frontend && npm run dev",
-    "start": "cd frontend && npm run preview"
-  },
-  "devDependencies": {
-    "vite": "^5.1.4"
+    "test": "pytest tests/",
+    "build": "docker build -t finance_repo ."
   }
 }
